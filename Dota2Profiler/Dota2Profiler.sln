@@ -9,7 +9,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenDotaClient", "Src\OpenDotaClient\OpenDotaClient.csproj", "{573909D7-803B-4B40-8514-27792EFF4BEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Src\Contracts\Contracts.csproj", "{C962223D-933A-4C20-A89F-950660AA3F07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Profiler", "Src\Profiler\Profiler.csproj", "{AE95C666-F9FC-4F32-8C51-B2FD6EF34A9E}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{573909D7-803B-4B40-8514-27792EFF4BEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573909D7-803B-4B40-8514-27792EFF4BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573909D7-803B-4B40-8514-27792EFF4BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573909D7-803B-4B40-8514-27792EFF4BEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C962223D-933A-4C20-A89F-950660AA3F07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C962223D-933A-4C20-A89F-950660AA3F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C962223D-933A-4C20-A89F-950660AA3F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C962223D-933A-4C20-A89F-950660AA3F07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE95C666-F9FC-4F32-8C51-B2FD6EF34A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE95C666-F9FC-4F32-8C51-B2FD6EF34A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE95C666-F9FC-4F32-8C51-B2FD6EF34A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE95C666-F9FC-4F32-8C51-B2FD6EF34A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
