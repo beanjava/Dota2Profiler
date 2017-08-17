@@ -1,0 +1,13 @@
+﻿*.suo
+Src/packages/*
+Src/**/bin/*
+*.user
+Src/**/obj/*
+Src/**/pkg/*
+packages/*
+*.suo
+*.coverage
+.vs/*
+**/StyleCop.Cache
+*.orig
+
