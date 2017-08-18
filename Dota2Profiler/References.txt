@@ -1,0 +1,5 @@
+DOTA 2 API 
+http://dota2api.readthedocs.io/en/latest/index.html
+
+OPEN DOTA API
+https://docs.opendota.com

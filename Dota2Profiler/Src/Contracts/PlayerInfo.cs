@@ -29,7 +29,7 @@ namespace Contracts
         /// <summary>
         /// Gets or sets the account Id
         /// </summary>
-        public string account_id { get; set; }
+        public long account_id { get; set; }
 
         /// <summary>
         /// Gets or sets the personal steam display name

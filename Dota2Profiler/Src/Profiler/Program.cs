@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenDotaClient;
+﻿using OpenDotaClient;
 
 namespace Profiler
 {
@@ -11,8 +6,14 @@ namespace Profiler
     {
         static void Main(string[] args)
         {
+            // Bean: 86702845
+            // Son : 115852730
             long playerId = 86702845;
             var playerInfo = OpenDotaClientHelper.GetPlayerInfo(playerId);
+
+            // test match id: 3381931109
+            long matchId = 3381931109;
+            var matchInfo = OpenDotaClientHelper.GetMatchInfo(matchId);
         }
     }
 }

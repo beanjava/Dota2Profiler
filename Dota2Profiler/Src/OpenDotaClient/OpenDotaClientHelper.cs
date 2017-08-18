@@ -16,5 +16,14 @@ namespace OpenDotaClient
 
             return playerInfo;
         }
+
+        public static MatchInfo GetMatchInfo(long matchId)
+        {
+            var openDotaUrl = OpenDotaApiUrl.GetOpenDotaApiUrl(OpenDotaApiUrl.OPENDOTA_MATCH, matchId.ToString());
+            var matchInfoJson = client.GetStringAsync(openDotaUrl).Result;
+            var matchInfo = JsonConvert.DeserializeObject<MatchInfo>(matchInfoJson);
+
+            return matchInfo;
+        }
     }
 }

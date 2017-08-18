@@ -40,7 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\SeriesType.cs" />
+    <Compile Include="Enums\TeamId.cs" />
+    <Compile Include="Enums\LobbyType.cs" />
+    <Compile Include="Enums\GameMode.cs" />
     <Compile Include="OpenDotaApiUrl.cs" />
+    <Compile Include="MatchInfo.cs" />
     <Compile Include="PlayerInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
