@@ -1,4 +1,5 @@
-﻿using System.Net.Http;
+﻿using System.Collections.Generic;
+using System.Net.Http;
 using Contracts;
 using Newtonsoft.Json;
 
@@ -8,22 +9,22 @@ namespace OpenDotaClient
     {
         private static readonly HttpClient client = new HttpClient();
 
-        public static PlayerInfo GetPlayerInfo(long playerId)
+        public static T GetObjectInfo<T>(string url, long id)
         {
-            var openDotaUrl = OpenDotaApiUrl.GetOpenDotaApiUrl(OpenDotaApiUrl.OPENDOTA_PLAYER, playerId.ToString());
-            var playerInfoJson = client.GetStringAsync(openDotaUrl).Result;
-            var playerInfo = JsonConvert.DeserializeObject<PlayerInfo>(playerInfoJson);
+            var apiFullUrl = OpenDotaApiUrl.GetOpenDotaApiUrl(url, id.ToString());
+            var objectJson = client.GetStringAsync(apiFullUrl).Result;
+            var objectItem = JsonConvert.DeserializeObject<T>(objectJson);
 
-            return playerInfo;
+            return objectItem;
         }
 
-        public static MatchInfo GetMatchInfo(long matchId)
+        public static T GetObjectInfo<T>(string url)
         {
-            var openDotaUrl = OpenDotaApiUrl.GetOpenDotaApiUrl(OpenDotaApiUrl.OPENDOTA_MATCH, matchId.ToString());
-            var matchInfoJson = client.GetStringAsync(openDotaUrl).Result;
-            var matchInfo = JsonConvert.DeserializeObject<MatchInfo>(matchInfoJson);
+            var apiFullUrl = OpenDotaApiUrl.GetOpenDotaApiUrl(url);
+            var objectJson = client.GetStringAsync(apiFullUrl).Result;
+            var objectItem = JsonConvert.DeserializeObject<T>(objectJson);
 
-            return matchInfo;
+            return objectItem;
         }
     }
 }
