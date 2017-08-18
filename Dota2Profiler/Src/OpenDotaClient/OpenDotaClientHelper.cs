@@ -2,6 +2,7 @@
 using System.Net.Http;
 using Contracts;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace OpenDotaClient
 {
@@ -25,6 +26,15 @@ namespace OpenDotaClient
             var objectItem = JsonConvert.DeserializeObject<T>(objectJson);
 
             return objectItem;
+        }
+
+        public static T GetObjectInfoFromSQL<T>(string url, long id)
+        {
+            var apiFullUrl = OpenDotaApiUrl.GetOpenDotaApiUrl(url, id.ToString());
+            var objectJson = client.GetStringAsync(apiFullUrl).Result;
+            var objectItem = JObject.Parse(objectJson);
+            var temp = objectItem["rows"].ToString();
+            return JsonConvert.DeserializeObject<T>(temp);
         }
     }
 }

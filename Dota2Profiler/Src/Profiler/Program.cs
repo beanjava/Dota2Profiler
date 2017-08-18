@@ -18,6 +18,10 @@ namespace Profiler
             // test match id: 3381931109
             long matchId = 3381931109;
             var matchInfo = OpenDotaClientHelper.GetObjectInfo<MatchInfo>(OpenDotaApiUrl.OPENDOTA_MATCH, matchId);
+
+            // TI7 league ID : 5401, expected game 540, takes about 5 secs
+            var leagueId = 5401;
+            var leagueMatches = OpenDotaClientHelper.GetObjectInfoFromSQL<List<MatchInfo>>(OpenDotaApiUrl.OPENDOTA_LEAGUE_GAMES, leagueId);
         }
 
         private static void InitializeData()
