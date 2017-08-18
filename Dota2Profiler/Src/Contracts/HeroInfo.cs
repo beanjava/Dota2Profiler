@@ -1,6 +1,4 @@
-﻿using Contracts.Enums;
-
-namespace Contracts
+﻿namespace Contracts
 {
     public class HeroInfo
     {
